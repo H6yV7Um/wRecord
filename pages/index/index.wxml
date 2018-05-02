@@ -1,0 +1,56 @@
+<!-- <view class="an-bg">
+ <image class="bg-img" src="../../dist/images/bg.jpg" ></image>
+ <view class="expr">
+  <text class="" style="font-size:60rpx;color:#13ff98;">1</text>
+  <text class="" style="font-size:60rpx;color:#e013ff;">+</text>
+  <text class="" style="font-size:60rpx;color:#ff134f;">2</text>
+  <text class="" style="font-size:60rpx;color:purple;">=</text>
+  <text class="" style="font-size:60rpx;color:#ffe713;">?</text>
+ </view>
+ <view class="apple-block apple-block1">
+    <image class="apple" src="../../dist/images/apple.png" bindtap='chooseApple'></image>
+    <text class="num">1</text>
+    <image class="sig" wx:if="{{isRight}}" src="../../dist/images/{{isRight}}.png"></image>
+ </view>
+ <view class="apple-block apple-block2" bindtap='chooseApple'>
+    <image class="apple" src="../../dist/images/apple.png" bindtap='chooseApple'></image> 
+    <text class="num">2</text>
+     <image class="sig" wx:if="{{isRight}}" src="../../dist/images/{{isRight}}.png"></image>
+ </view>
+ <view class="apple-block apple-block3">
+    <image class="apple" src="../../dist/images/apple.png" bindtap='chooseApple'></image>
+    <text class="num">3</text>
+ </view>
+ <view class="apple-block apple-block4">
+    <image class="apple" src="../../dist/images/apple.png" bindtap='chooseApple'></image>
+    <text class="num">124</text>
+ </view>
+</view> -->
+ <scroll-view class="bg" scroll-y="true" scroll-top="{{ scrollTop }}"
+    scroll-into-view="a{{ lastId }}">
+  <view class="page-section" bindtap='playVideo'>
+    <view  id="a{{item.id}}" class="{{item.sign==1 ? 'talk-line-r':'talk-line-l'}}" wx:for="{{talkList}}" wx:for-index="index" wx:for-item="item">
+      <view class="talk {{item.sign==1 ? 'talk-r':'talk-l'}}" data-index="{{index}}" data-voice="{{item.src}}">
+      <text wx:if="{{item.Answer}}" data-voice="{{item.src}}" >{{item.Answer}}</text>
+        <image data-index="{{index}}" data-voice="{{item.src}}" class="play" src="../../dist/images/play.png" wx:if="{{!item.isPlaying && item.sign!=2}}"></image>
+        <image data-index="{{index}}" data-voice="{{item.src}}" class="play" src="../../dist/images/play.gif" wx:if="{{item.isPlaying}}"></image>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+  
+<view wx:if="{{isSpeaking}}" class="speak-style">
+    <image class="sound-style" src="../../dist/images/voice_icon_speech_sound_1.png"></image>
+    <image wx:if="{{speakingPicIndex==2}}" class="sound-style" src="../../dist/images/voice_icon_speech_sound_2.png"></image>
+    <image wx:if="{{speakingPicIndex==3}}" class="sound-style" src="../../dist/images/voice_icon_speech_sound_3.png"></image>
+    <image wx:if="{{speakingPicIndex==4}}" class="sound-style" src="../../dist/images/voice_icon_speech_sound_4.png"></image>
+    <image wx:if="{{speakingPicIndex==5}}" class="sound-style" src="../../dist/images/voice_icon_speech_sound_5.png"></image>
+  </view>
+<view class="record-style">
+  <button type="primary" class="btn-style" 
+  bindlongtap='startRecord'
+  bindtouchend="endRecord">按住提问</button>
+</view>
+<!-- <import src="../../component/message/message.wxml" />
+<template is="message" data="{{message: message}}" />  -->

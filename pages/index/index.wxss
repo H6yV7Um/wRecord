@@ -1,0 +1,209 @@
+@import "../../component/message/message.wxss";
+
+.an-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.an-bg .expr {
+  position: absolute;
+  top: 100rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.an-bg .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.an-bg .apple-block {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.an-bg .apple-block {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.an-bg .apple-block .sig {
+  width: 96rpx;
+  height: 96rpx;
+  margin-top: -30rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -21rpx;
+}
+
+.an-bg .apple-block .apple {
+  /* position: absolute; */
+  width: 140rpx;
+  height: 140rpx;
+  /* top:0; *//* left:0; */
+}
+
+.an-bg .apple-block1 {
+  top: 340rpx;
+  left: 120rpx;
+}
+
+.an-bg .apple-block2 {
+  top: 410rpx;
+  left: 220rpx;
+}
+
+.an-bg .apple-block3 {
+  top: 260rpx;
+  left: 420rpx;
+}
+
+.an-bg .apple-block4 {
+  top: 540rpx;
+  left: 500rpx;
+}
+
+.an-bg .apple-block .num {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  margin-top: -30rpx;
+  margin-left: -30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 50rpx;
+  text-align: center;
+}
+
+page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100rpx;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.page-section {
+  flex: 1;
+  padding: 20rpx;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.talk-line-r {
+  text-align: right;
+}
+
+.talk {
+  display: inline-block;
+  word-break: break-all;
+  position: relative;
+  min-width: 110rpx;
+  max-width: 500rpx;
+  padding: 10rpx;
+  background: #088cb7;
+  -moz-border-radius: 12rpx;
+  -webkit-border-radius: 12rpx;
+  border-radius: 12rpx;
+  margin: 20rpx;
+  line-height: 60rpx;
+  min-height: 70rpx;
+}
+
+.talk:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 100%;
+  top: 14rpx;
+  border-top: 10rpx solid transparent;
+  border-bottom: 10rpx solid transparent;
+}
+
+.talk-l:before {
+  content: "";
+  right: 100%;
+  border-right: 14rpx solid #088cb7;
+}
+
+.talk-r {
+  text-align: right;
+}
+
+.talk-r:before {
+  content: "";
+  left: 100%;
+  border-left: 14rpx solid #088cb7;
+}
+
+.talk .play {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.record-style {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  width: 100%;
+}
+
+.btn-style {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  color: #fff;
+}
+
+/* 录音 */
+
+.speak-style {
+  position: fixed;
+  height: 240rpx;
+  width: 240rpx;
+  border-radius: 20rpx;
+  background: #26a5ff;
+  bottom: 150rpx;
+  left: 50%;
+  margin-left: -125rpx;
+}
+
+.sound-style {
+  position: absolute;
+  width: 74rpx;
+  height: 150rpx;
+  margin-top: 45rpx;
+  margin-left: 83rpx;
+}
+
+@keyframes first {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
