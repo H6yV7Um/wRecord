@@ -2,8 +2,6 @@ const app = getApp();
 
 var message = require('../../component/message/message');
 const recorder = require('../../utils/recorder.js');
-//微信小程序新录音接口，录出来的是aac或者mp3，这里要录成mp3
-// const mp3Recorder = wx.getRecorderManager();
 const mp3RecoderOptions = {
   duration: 15000,
   sampleRate: 16000,
@@ -33,39 +31,6 @@ Page({
       stop: this.translate,
       endPlay: this.endPlay
     });
-    // mp3Recorder.onStart(() => {
-    //   console.info('录音开始');
-    // })
-    // mp3Recorder.onStop((res) => {
-    //   this.src = res.tempFilePath;
-    //   var list = this.data.talkList;
-    //   list.push({ id: list.length + '', src: res.tempFilePath, isPlaying: false, sign: 1 });
-    //   this.setData({
-    //     talkList: list,
-    //     lastId: list.length - 1
-    //   });
-    //   this.translate(res.tempFilePath);
-    //   console.info('录音结束');
-    // });
-
-    // this.innerAudioContext = wx.createInnerAudioContext();
-    // this.innerAudioContext.onError((res) => {
-    //   // 播放音频失败的回调
-
-    // });
-    // this.innerAudioContext.onPlay((res) => {
-    //   console.info('播放中');
-    // });
-    // this.innerAudioContext.onEnded((res) => {
-    //   debugger
-    //   var list = this.data.talkList;
-    //   // list[this.qindex].isPlaying = false;
-    //   this.setData({
-    //     talkList: list
-    //   });
-    //   console.info('播放完');
-    // });
-
     message.show.call(that, {
       content: '网络开小差了',
       icon: 'offline',
@@ -185,11 +150,6 @@ Page({
       },
       complete: function () {
         wx.hideToast();
-        // $this.setData({
-        //   duration: 15,
-        //   recAnimation: {},
-        //   contentAnimation: {}
-        // });
       }
     });
 
